@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ guthub.repository_owner }}/${{ github.event.repository.name }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
           build-args: |
             DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
             DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}
