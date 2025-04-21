@@ -23,12 +23,9 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker-compose.yml
+          file: ./dockerfile_flask
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
-          build-args: |
-            DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
-            DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}
           
       - name: Post a message in a channel
         uses: slackapi/slack-github-action@v2.0.0
