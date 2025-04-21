@@ -4,3 +4,4 @@ sqlparse==0.5.3
 gunicorn==23.0.0
 typing_extensions==4.13.2
 psycopg2-binary==2.9.10
+django-dotenv==1.4.2
